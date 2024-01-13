@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <p>יצירת קשר  </p>
+    <p color="white">wetwrywrywywrywrywwyw4ywy ccccקשר  </p>
   )
 }
 

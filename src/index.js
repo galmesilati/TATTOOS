@@ -7,9 +7,11 @@ import axios from 'axios';
 import Home from './Components/Home';
 import Gallery from './Components/Gallery';
 import TattooTreatment from './Components/TattooTreatment';
-import Contact from './Components/Contact';
 import Crew from './Components/Crew';
 import {RouterProvider, createBrowserRouter } from 'react-router-dom';
+import QuestionsAnswers from './Components/questionsAnswers';
+import ContactUs from './Components/Contact';
+import Contact from './Components/Contact';
 
 axios.interceptors.request.use(
   (config) => {
@@ -37,16 +39,20 @@ const router = createBrowserRouter([
         element: <Gallery />
       },
       {
-        path: 'TattooTreatment',
+        path: '/TattooTreatment',
         element: <TattooTreatment />
       },
       {
-        path: 'Contact',
+        path: '/Contact',
         element: <Contact />
       },
       {
-        path: 'Crew',
+        path: '/Crew',
         element: <Crew />
+      },
+      {
+        path: '/QuestionsAnswers',
+        element: <QuestionsAnswers />
       }
     ]
   }

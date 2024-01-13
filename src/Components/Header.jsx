@@ -12,25 +12,25 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['בית', '|', 'גלריה','|', 'טיפול בקעקוע','|', 'יצירת קשר','|', 'צוות'];
+const pages = [ 'שאלות ותשובות','בית', 'גלריה', 'טיפול בקעקוע', 'יצירת קשר', 'צוות'];
 
 function Header() {
 
   let pages = []
-if (localStorage.getItem('token') ) {
-  pages = ['צוות', '|', 'יצירת קשר','|', 'גלריה','|', 'טיפול בקעקוע','|', 'בית']
-} else {
-  pages = ['בית']
-}
+  pages = [ 'שאלות ותשובות','|','צוות', '|', 'יצירת קשר', 'גלריה','|', 'טיפול בקעקוע','|', 'בית']
 
 const pageMapping = {
       'בית': '/',
       'גלריה': '/Gallery',
       'טיפול בקעקוע': '/TattooTreatment',
-      'יצירת  קשר': '/Contact',
-      'צוות': '/Crew'
+      'צוות': '/Crew',
+      'שאלות ותשובות': '/QuestionsAnswers',
+      'יצירת קשר': '/Contact'
     }
+
+const navigate = useNavigate()
 
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,7 +43,8 @@ const pageMapping = {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (pageName) => {
+    navigate(pageMapping[pageName])
     setAnchorElNav(null);
   };
 
@@ -52,11 +53,17 @@ const pageMapping = {
   };
 
   return (
-    <AppBar position="relative" sx={{ backgroundColor: '#333', color: 'white' }}>
-      <Toolbar sx={{justifyContent: 'center'}}>
-        <Box sx={{justifyContent: 'center', mt: 2.5, mb: 2.5, flexGrow: 1,  display: { xs: 'none', md: 'flex'}}}>
-          {pages.map((page, index) => (
-            <Button key={index} sx={{color: 'white', mx: 1, fontFamily: 'Arimo, sans-serif', fontSize: '1.3rem', fontWeight: 'bold' }}>
+    <AppBar position="relative" sx={{ backgroundColor: 'rgba(51, 51, 51, 0.8)', color: 'white', mt: 1 }}>
+      <Toolbar sx={{ justifyContent: 'center' }}>
+        <Box sx={{ justifyContent: 'center', mt: 0, mb: 0, flexGrow: 1, display: 'flex' }}>
+          {pages.slice(0, 5).map((page, index) => (
+            <Button key={index} onClick={() => handleCloseNavMenu(page)} sx={{ color: 'white', mx: 1, fontFamily: 'Arimo, sans-serif', fontSize: '1.3rem', fontWeight: 'bold' }}>
+              {page}
+            </Button>
+          ))}
+          <Avatar alt="Logo" src="https://i.ibb.co/h9ydL1X/Daniel-Atzram-2.jpg" sx={{ width: 105, height: 105, border: 2, ml: 'auto', mr: 'auto' }} />
+          {pages.slice(5).map((page, index) => (
+            <Button key={index + 5} onClick={() => handleCloseNavMenu(page)} sx={{ color: 'white', mx: 1, fontFamily: 'Arimo, sans-serif', fontSize: '1.3rem', fontWeight: 'bold' }}>
               {page}
             </Button>
           ))}
@@ -66,62 +73,4 @@ const pageMapping = {
   );
 }
 
-//   return (
-//     <AppBar position="relative" sx={{ backgroundColor: 'grey', color: 'black' }}>
-//       <Container maxWidth="xl">
-//         <Toolbar disableGutters sx={{ justifyContent: 'right' }}>
-//           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-//             <IconButton
-//               size="large"
-//               aria-label="account of current user"
-//               aria-controls="menu-appbar"
-//               aria-haspopup="true"
-//               onClick={handleOpenNavMenu}
-//               color="inherit"
-//             >
-//               <MenuIcon />
-//             </IconButton>
-//             <Menu
-//               id="menu-appbar"
-//               anchorEl={anchorElNav}
-//               anchorOrigin={{
-//                 vertical: 'bottom',
-//                 horizontal: 'left',
-//               }}
-//               keepMounted
-//               transformOrigin={{
-//                 vertical: 'top',
-//                 horizontal: 'left',
-//               }}
-//               open={Boolean(anchorElNav)}
-//               onClose={handleCloseNavMenu}
-//               sx={{
-//                 display: { xs: 'block', md: 'none' },
-//               }}
-//             >
-//               {pages.map((page) => (
-//                 <MenuItem key={page} onClick={handleCloseNavMenu} >
-//                   <Typography  textAlign="center">{page}</Typography>
-//                 </MenuItem>
-//               ))}
-//             </Menu>
-//           </Box>
-//           <Box sx={{justifyContent: 'center',  flexGrow: 1, display: { xs: 'none', md: 'flex'} }}>
-//             {pages.map((page) => (
-//               <Button
-//                 key={page}
-//                 onClick={handleCloseNavMenu}
-//                 sx={{ mr: 3, my: 4, color: 'black', display: 'block', fontSize: '1.4rem', fontWeight: 700 }}
-//               >
-//                 {page}
-//               </Button>
-//             ))}
-//           </Box>
-
-
-//         </Toolbar>
-//       </Container>
-//     </AppBar>
-//   );
-// }
 export default Header;
