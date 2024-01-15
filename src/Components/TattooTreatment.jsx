@@ -3,13 +3,9 @@ import { Grid, Typography } from "@mui/material";
 const TattooTreatment = () => {
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', background: 'rgba(51, 51, 51, 0.8)', alignItems: 'center', height: '80vh', marginTop: '32px', margin: '0 128px', width: 'calc(100% - 256px)' }}>
-        <div style={{ textAlign: 'center', maxWidth: '600px' }}>
-          <Typography variant="h3" color={'white'}>
-            טיפול בקעקוע חדש
-          </Typography>
-          <br />
-          <Typography color={'white'}>
+    <br/>
+    <br/>
+          <Typography color={'white'} style={{ textAlign: 'center'}} >
              להוריד את הניילון/פד לאחר שעתיים  מסיום הקעקוע ואז לשטוף עם מים קרים/פושרים וסבון •
             <br />
             <br />
@@ -30,11 +26,9 @@ const TattooTreatment = () => {
             <br />
             <br />
             <br />
-            (: אם יש שאלות מוזמנים לכתוב לי תמיד
+            (: לשאלות נוספות מוזמנים ליצור קשר
           </Typography>
-          
-        </div>
-      </div>
+
     </>
   );
 };
