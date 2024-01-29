@@ -3,6 +3,7 @@ import { Grid, Typography, Paper, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWaze } from '@fortawesome/free-brands-svg-icons'; // Import the Waze icon
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { fontGrid } from '@mui/material/styles/cssUtils';
 
 
 
@@ -27,17 +28,20 @@ const Contact = () => {
       </Grid>
 
       {/* Right side - Content */}
-      <Grid item xs={12} md={6} style={{ padding: '20px' }} marginTop={5} >
-        <Typography dir="rtl" fontSize={30}>
+      <Grid item xs={12} md={6} style={{ padding: '20px' }} marginTop={5} > 
+      <p className='.david-libre-bold ' dir="rtl" style={{fontSize: 30}}>
         <b>
-        כתובת: החרמון 5, אור עקיבא <br/>
+      כתובת: החרמון 5, אור עקיבא <br/>
         טלפון: 052-701-5654 <br/>
         אימייל:{' '}
           <a href="mailto:AtzramDaniel22@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
             AtzramDaniel22@gmail.com
           </a>
           </b>
-        </Typography>
+
+        
+      </p>       
+        
         <Box
         display="flex"
         justifyContent="center"

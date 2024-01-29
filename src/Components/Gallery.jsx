@@ -1,4 +1,7 @@
-import { Grid, Paper, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
+import TattooTreatment from "./TattooTreatment";
+import Contact from "./Contact";
+import Home from "./Home";
 
 const Gallery = () => {
   const theme = useTheme();
@@ -14,7 +17,7 @@ const Gallery = () => {
     'https://i.ibb.co/JBnv8r7/8.jpg',
     'https://i.ibb.co/55tZbwz/9.jpg',
     'https://i.ibb.co/k3dfVJL/10.jpg',
-    'https://i.ibb.co/LCy45jf/11.jpg',
+    'https://i.ibb.co/bL1VgLV/dd.jpg',
     'https://i.ibb.co/1ZHG6tp/12.jpg',
     'https://i.ibb.co/hRyRgs1/13.jpg',
     'https://i.ibb.co/V3dBVS2/14.jpg',
@@ -33,6 +36,7 @@ const Gallery = () => {
   };
 
   return (
+    <>
     <Grid container spacing={3} marginTop={5}>
       {imageUrls.map((imageUrl, index) => (
         <Grid item key={index} xs={12} sm={6} md={getGridItemSize().md}>
@@ -40,13 +44,16 @@ const Gallery = () => {
             <img
               src={imageUrl}
               alt={`Image ${index + 1}`}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover',  }}
+              
             />
           </Paper>
         </Grid>
       ))}
     </Grid>
+    </>
   );
+  
 };
 
 export default Gallery;
