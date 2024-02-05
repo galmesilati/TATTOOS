@@ -1,7 +1,5 @@
 import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
-import TattooTreatment from "./TattooTreatment";
-import Contact from "./Contact";
-import Home from "./Home";
+
 
 const Gallery = () => {
   const theme = useTheme();

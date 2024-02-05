@@ -44,3 +44,24 @@ code {
   font-style: normal;
   font-size: 70px;
 }
+
+@media only screen and (max-width: 600px) {
+  /* Styles for small screens (phones) */
+
+  /* Example: Adjust the font size for the title */
+  div > h3 {
+    font-size: 24px;
+  }
+
+  /* Example: Adjust the font size for the description */
+  div > h7 {
+    font-size: 16px;
+  }
+
+  /* Example: Add more specific styles for small screens */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

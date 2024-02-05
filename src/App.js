@@ -7,7 +7,7 @@ function App() {
   return (
     <>
      {/* <div style={{ backgroundColor: 'black', minHeight: '100vh', overflowX: 'hidden' }}> */}
-    <Header/>
+    {/* <Header/> */}
     <Outlet />
     {/* </div> */}
     </>
