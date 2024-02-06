@@ -5,8 +5,18 @@ import Contact from "./Contact";
 import Gallery from "./Gallery";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { useEffect } from "react";
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = 'DATattoos';
+      document.querySelector('link[rel="icon"]').setAttribute(
+        'href', 'https://i.ibb.co/w4PrzZ6/Daniel-Atzram-3.jpg'
+        )
+
+  }, [])
+
   return (
    <>
       <div id="Home" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>

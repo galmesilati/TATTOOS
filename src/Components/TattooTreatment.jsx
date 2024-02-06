@@ -1,9 +1,12 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 
 const TattooTreatment = () => {
+  
+  
   return (
     <>
-    <div style={{marginRight: '30%'}}>
+    <Grid container justifyContent="center">
+      <Grid item xs={12} sm={8} md={6} lg={4}>
       <br />
       <br />
       <Typography variant="body1" className="david-libre-medium" style={{ textAlign: 'right' }}>
@@ -41,7 +44,8 @@ const TattooTreatment = () => {
         <br />
         <br />
       </Typography>
-      </div>
+        </Grid>
+      </Grid>
     </>
   );
 };

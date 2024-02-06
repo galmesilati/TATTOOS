@@ -1,7 +1,8 @@
-import { Box, Grid, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 
 const Gallery = () => {
+  
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -22,8 +23,8 @@ const Gallery = () => {
     'https://i.ibb.co/t4FSXBg/15.jpg',
     'https://i.ibb.co/fX9tmkg/16.jpg',
     'https://i.ibb.co/B3hbWw2/17.jpg',
-    // ... Add more image URLs
   ];
+
 
   const getGridItemSize = () => {
     if (isMobile) {
