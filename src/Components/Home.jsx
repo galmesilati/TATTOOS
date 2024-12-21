@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     document.title = 'DATattoos';
       document.querySelector('link[rel="icon"]').setAttribute(
-        'href', 'https://i.ibb.co/w4PrzZ6/Daniel-Atzram-3.jpg'
+        'href', 'https://i.ibb.co/h9ydL1X/Daniel-Atzram-2.jpg'
         )
 
   }, [])

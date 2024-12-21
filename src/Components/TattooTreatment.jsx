@@ -10,7 +10,7 @@ const TattooTreatment = () => {
       <br />
       <br />
       <Typography variant="body1" className=".david-libre-medium" style={{ textAlign: 'right' }}>
-        להוריד את הניילון/פד לאחר שעתיים מסיום הקעקוע ואז לשטוף עם מים קרים/פושרים וסבון 
+        יש להוריד את הניילון/פד לאחר שעתיים מסיום הקעקוע ואז לשטוף עם מים קרים/פושרים וסבון 
         <br />
         <br />
       </Typography>
@@ -40,7 +40,7 @@ const TattooTreatment = () => {
         <br />
       </Typography>
       <Typography variant="body1" className="david-libre-medium" style={{ textAlign: 'right' }}>
-        (: לשאלות נוספות מוזמנים ליצור קשר
+         לשאלות נוספות מוזמנים ליצור קשר
         <br />
         <br />
       </Typography>

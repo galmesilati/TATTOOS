@@ -7,20 +7,20 @@ const Gallery = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const imageUrls = [
-    'https://i.ibb.co/FJvLrFP/18.jpg',
+    'https://i.ibb.co/8dr9CVZ/6.jpg',
     'https://i.ibb.co/ZHt8zGT/2.jpg',
     'https://i.ibb.co/jv8kRG0/3.jpg',
     'https://i.ibb.co/XtZwvpT/4.jpg',
     'https://i.ibb.co/mbD0Ymn/6.jpg',
-    'https://i.ibb.co/SNPMKWn/7.jpg',
-    'https://i.ibb.co/JBnv8r7/8.jpg',
-    'https://i.ibb.co/55tZbwz/9.jpg',
+    'https://i.ibb.co/wBQwDv5/3.jpg',
+    'https://i.ibb.co/pXjFSL7/1.jpg',
+    'https://i.ibb.co/8rHSBJH/2.jpg',
     'https://i.ibb.co/k3dfVJL/10.jpg',
     'https://i.ibb.co/bL1VgLV/dd.jpg',
-    'https://i.ibb.co/1ZHG6tp/12.jpg',
-    'https://i.ibb.co/hRyRgs1/13.jpg',
+    'https://i.ibb.co/VCPyk3K/4.jpg',
+    'https://i.ibb.co/XxMDcFt/5.jpg',
     'https://i.ibb.co/V3dBVS2/14.jpg',
-    'https://i.ibb.co/t4FSXBg/15.jpg',
+    'https://i.ibb.co/R6S0Ts6/7.jpg',
     'https://i.ibb.co/fX9tmkg/16.jpg',
     'https://i.ibb.co/B3hbWw2/17.jpg',
   ];
