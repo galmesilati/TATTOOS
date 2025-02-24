@@ -20,7 +20,7 @@ const Gallery = () => {
     'https://i.ibb.co/VCPyk3K/4.jpg',
     'https://i.ibb.co/XxMDcFt/5.jpg',
     'https://i.ibb.co/V3dBVS2/14.jpg',
-    'https://i.ibb.co/R6S0Ts6/7.jpg',
+    'https://i.ibb.co/t4FSXBg/15.jpg',
     'https://i.ibb.co/fX9tmkg/16.jpg',
     'https://i.ibb.co/B3hbWw2/17.jpg',
   ];
